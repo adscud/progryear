@@ -21,13 +21,51 @@
     position: absolute;
     background: #F5F5F5;
     height: 100%;
-    border-radius: 10px;
+    border-radius: inherit;
     transition: width .2s ease-in;
 }
 
+.progress-title-counter {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media all and (min-width: 980px){
+    .progress-title-counter {
+        flex-direction: row;
+    }
+}
+
 .progress-title {
-    align-self: flex-start;
-    text-align: left;
+    padding-top: 20px;
+    align-self: center;
+    text-align: center;
     margin: 0 0 16px;
     color: #F5F5F5;
+}
+
+@media all and (min-width: 980px){
+    .progress-title {
+        height: 100%;
+        margin: 0;
+    }
+}
+
+.progress-counter {
+    text-align: center;
+    margin: 0 0 16px;
+    font-weight: 900;
+    font-size: 55px;
+    color: #F5F5F5;
+    opacity: 15%;
+    font-style: italic;
+}
+
+@media all and (min-width: 980px){
+    .progress-counter {
+        margin: 0 0 0 auto;
+    }
 }
