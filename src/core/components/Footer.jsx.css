@@ -1,0 +1,23 @@
+.footer {
+    max-height: 100px;
+}
+
+.footer-text {
+    font-size: 10px;
+    margin: 0 0 3px;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.footer-text:last-child {
+    margin-bottom: 8px;
+}
+
+.footer-link,
+.footer-link:active,
+.footer-link:after,
+.footer-link:hover {
+    font-weight: 900;
+    text-decoration: none;
+    color: #F5F5F5;
+}
