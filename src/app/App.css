@@ -2,12 +2,21 @@
     background-color: #101010;
     min-height: 100vh;
     max-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .Container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     margin-right: auto;
     margin-left:  auto;
-    max-width: 960px;
-    padding-right: 8px;
-    padding-left:  8px;
+    width: 100%;
+}
+
+@media all and (min-width: 980px) {
+    .Container {
+        max-width: 980px;
+    }
 }
