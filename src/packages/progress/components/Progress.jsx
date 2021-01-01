@@ -6,6 +6,7 @@ export const Progress = () => {
 
     return (
         <div className="progress-container">
+            <Title />
             <Bar>
                 <Filler width={width} />
             </Bar>
@@ -13,7 +14,13 @@ export const Progress = () => {
     )
 }
 
-function Bar({ children }) {
+function Title () {
+    return (
+        <h2 className="progress-title">Be brave, the year is almost done 👀</h2>
+    )
+}
+
+function Bar ({ children }) {
     return (
         <div className="progress-bar">
             {children}
