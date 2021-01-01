@@ -15,9 +15,7 @@ export const Progress = () => {
     return (
         <div className="progress-container">
             <Title width={percentage} />
-            <Bar>
-                <Filler width={percentage} />
-            </Bar>
+            <Bar percentage={percentage} />
         </div>
     )
 }
@@ -31,14 +29,15 @@ function Title ({ width }) {
     )
 }
 
-function Bar ({ children }) {
+function Bar ({ percentage }) {
+    const [ date ] = React.useState(new Date())
+    const [ empty ] = React.useState(percentage - 100)
     return (
-        <div className="progress-bar">
-            {children}
-        </div>
+        <>
+            <div className="progress-bar" style={{
+                background: `linear-gradient(90deg, #FFFFFF ${percentage}%, #101010 ${empty}%)`
+            }}/>
+            <p className="progress-bar-subtitle">We spent {percentage}% of {date.getUTCFullYear()}</p>
+        </>
     )
-}
-
-function Filler ({ width }) {
-    return <div className="progress-filler" style={{ width: `${width}%` }} />
 }

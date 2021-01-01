@@ -13,16 +13,13 @@
     position: relative;
     height: 20px;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 100px;
     border: 1px solid #F5F5F5;
 }
 
-.progress-filler {
-    position: absolute;
-    background: #F5F5F5;
-    height: 100%;
-    border-radius: inherit;
-    transition: width .2s ease-in;
+.progress-bar-subtitle {
+    color: #F5F5F5;
+    font-size: 10px;
 }
 
 .progress-title-counter {
